@@ -1,0 +1,13 @@
+---
+- name: Ansible_playbook_install_nginx
+  hosts: do
+
+  tasks:
+    - name: install epel-release
+      yum: name=epel-release state=latest
+    - name: install nginx web server
+      yum: name=nginx state=present
+    - name: Start nginx web server
+      service: name=nginx state=started
+    - name: test
+      
