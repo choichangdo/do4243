@@ -5,5 +5,5 @@
   tasks:
     - name: Change OS HostName 
       hostname:
-        name="{{ inventory_hostname }}"
+        name= "{{ inventory_hostname }}"
 ...
