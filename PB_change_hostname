@@ -1,6 +1,6 @@
 ---
 - name: Ansible_playbook_Server_Hostname_Change
-- hosts: "{{ var1 }}"
+  hosts: "{{ var1 }}"
   
   tasks:
     - name: Change OS HostName 
