@@ -1,6 +1,6 @@
 ---
 - name: Ansible_playbook_start_nginx
-  hosts: {{ HOST }}
+  hosts: {{ var1 }}
 
   tasks:
     - name: Start nginx web server
