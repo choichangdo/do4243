@@ -4,5 +4,6 @@
 
   tasks:
     - name: Start nginx web server
-      service: name=nginx state=restarted
+      service: name=nginx state="{{ status1 }}"
+...
       

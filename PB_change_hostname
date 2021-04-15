@@ -1,3 +1,9 @@
 ---
 - name: Ansible_playbook_Server_Hostname_Change
+- hosts: "{{ HOST_NAME }}"
   
+  tasks:
+    - name: Change OS HostName 
+      hostname:
+        name="{{ inventory_hostname }}"
+...
