@@ -1,0 +1,8 @@
+---
+- name: Ansible_playbook_change_firewall
+  hosts: "{{ SVR_NAME }}"
+  
+  tasks:
+    - name: firewall service status
+      shell: systemctl status firewalld.service | grep Loaded | awk '{print $4}' | cut -d\; -f1
+...
