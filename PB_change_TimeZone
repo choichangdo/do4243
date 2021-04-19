@@ -5,4 +5,5 @@
 
  - name: Ansible_playbook_Timezone_Change
    command: timedatectl set-timezone {{ CH_TIME_ZONE }}
-   register: timezone_status_log
+   register: timezone_status_log_1
+   
