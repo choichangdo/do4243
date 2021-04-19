@@ -1,0 +1,8 @@
+---
+ - name: Ansible_playbook_Timezone_Status
+   command: timedatectl status | grep "Time zone"
+   register: timezone_status_log
+
+ - name: Ansible_playbook_Timezone_Change
+   command: timedatectl set-timezone {{ CH_TIME_ZONE }}
+   register: timezone_status_log
