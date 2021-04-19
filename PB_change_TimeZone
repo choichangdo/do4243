@@ -3,7 +3,7 @@
   hosts: "{{ SVR_NAME }}"
 
 
-tasks:
-  - name: Ansible_playbook_Timezone_Change
-    shell: timedatectl set-timezone {{ CH_TIME_ZONE }}
+  tasks:
+    - name: Ansible_playbook_Timezone_Change
+      shell: timedatectl set-timezone {{ CH_TIME_ZONE }}
 
