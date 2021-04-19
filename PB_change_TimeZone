@@ -2,6 +2,8 @@
 - name: Change timezone (Asia/Seoul)
   hosts: "{{ SVR_NAME }}"
 
-- name: Ansible_playbook_Timezone_Change
-  shell: timedatectl set-timezone {{ CH_TIME_ZONE }}
+
+tasks:
+  - name: Ansible_playbook_Timezone_Change
+    shell: timedatectl set-timezone {{ CH_TIME_ZONE }}
 
