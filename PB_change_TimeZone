@@ -1,7 +1,10 @@
 ---
- - name: Ansible_playbook_Timezone_Status
-   command: timedatectl status | grep "Time zone"
+- name: Change timezone (Asia/Seoul)
+  hosts: "{{ SVR_NAME }}"
+
+- name: Ansible_playbook_Timezone_Status
+  shell: timedatectl status | grep "Time zone"
  
- - name: Ansible_playbook_Timezone_Change
-   command: timedatectl set-timezone {{ CH_TIME_ZONE }}
+- name: Ansible_playbook_Timezone_Change
+  shell: timedatectl set-timezone {{ CH_TIME_ZONE }}
 
