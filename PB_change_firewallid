@@ -7,8 +7,8 @@
       shell: systemctl status firewalld.service | grep Loaded | awk '{print $4}' | cut -d\; -f1
       register: status_check
 
-- debug: 
-    msg: status_check={{ status_check.stdout }}
+    - debug: 
+        msg: status_check={{ status_check.stdout }}
 
 
 ...
