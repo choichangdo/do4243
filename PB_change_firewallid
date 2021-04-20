@@ -9,14 +9,13 @@
 
     - debug: 
         msg: status_check={{ status_check.stdout }}
-  #      when: status_check == "enable"
-  #      shell: systemctl disable firewalld
+        when: status_check.stdout == "enabled"
 
-  #      - name: firewall service restatus check
-  #        shell: systemctl status firewalld.service | grep Loaded | awk '{print $4}' | cut -d\; -f1
-  #        register: status_after_check
-
-  #      - debug: 
-  #          msg: status_after_check={{ status_after_check.stdout }}
+    - name: firewall change firewallid
+      shell: systemctl disable firewalld
+      when: status_check.stdout == "enabled"
+   #   register: status_recheck     
+    
+    
 
 ...
