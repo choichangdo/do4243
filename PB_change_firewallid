@@ -16,6 +16,16 @@
       when: status_check.stdout == "enabled"
    #   register: status_recheck     
     
+    - name: firewall service down
+      shell: systemctl status firewalld.service | grep Active | awk '{print $2}'
+      register: fw_status_check
     
+    - debug:
+        msg: fw_status_check{{ fw_status_check.stdout }}
+      when: fw_status_check.stdout =="active"
+    
+    - name: firewall down
+      shell: systemctl stop firewalld
+      when: fw_status_check.stdout == "active" 
 
 ...
