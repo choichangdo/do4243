@@ -9,7 +9,7 @@
 
     - debug: 
         msg: status_check={{ status_check.stdout }}
-        when: status_check.stdout == "enabled"
+      when: status_check.stdout == "enabled"
 
     - name: firewall change firewallid
       shell: systemctl disable firewalld
