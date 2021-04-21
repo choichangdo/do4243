@@ -1,0 +1,10 @@
+---
+- name: Ansible_playbook_install_Chrony
+  hosts: "{{ SVR_NAME }}"
+
+  tasks:
+    - name: install chrony
+      yum: name=chrony state=latest
+
+    - name: Start Chrony web server
+      service: name=chrony state="{{ status1 }}"
