@@ -7,4 +7,4 @@
       yum: name=chrony state=latest
 
     - name: Start Chrony web server
-      service: name=chrony state="{{ STATUS }}"
+      service: name=chronyd state="{{ STATUS }}"
