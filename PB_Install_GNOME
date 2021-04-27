@@ -1,0 +1,10 @@
+---
+- name: Ansible_playbook_install_GNOME
+  hosts: "{{ SVR_NAME }}"
+
+  tasks:
+    - name: install GNOME
+      yum: name=GNOME state=latest
+
+    - name: Start GNOME web server
+      service: name=chronyd state="{{ STATUS }}"
