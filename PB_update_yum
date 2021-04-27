@@ -1,0 +1,9 @@
+---
+- name: YUM update
+  hosts: "{{ SVR_NAME }}"
+
+  tasks:
+    - name: update yum 
+      yum:
+        name: yum
+        state: latest
