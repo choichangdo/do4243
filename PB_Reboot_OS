@@ -1,0 +1,8 @@
+---
+- name: OS Reboot
+  hosts: "{{ SVR_NAME }}"
+
+  tasks:
+    - name: OS Reboot
+      reboot:
+        msg: "System Reboot starting! by Ansible !"
